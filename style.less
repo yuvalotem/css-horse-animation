@@ -1,0 +1,249 @@
+.part {
+    background-color: #fffff19;
+    // background-color: black;
+    border: 1px black solid;
+    position: absolute;
+}
+.bodyPart {
+    width: 4vw;
+    height: 5vw;
+    border-radius: 20%;
+}
+.tailPart {
+    width: 4vw;
+    height: 1vw;
+    border-radius: 80%;
+    top: 3.5vw;
+}
+
+#container{
+    .sky{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 55vh;
+        background-color: #48dbfb;
+        background-image: linear-gradient(#48dbfb , #ff4e00);
+    }
+    .send{
+        position: absolute;
+        top: 55vh;
+        left: 0;
+        width: 100vw;
+        height: 45vh;
+        background-color: #feca57;
+    }
+    .sun{
+        position: absolute;
+        top: 50vh;
+        left: 45vw;
+        width: 5vw;
+        height: 2.5vw;
+        border-top-left-radius: 2.5vw;
+        border-top-right-radius: 2.5vw;
+        background-color: #FFC312;
+        background-image: linear-gradient(#FFC312 , #EA2027);
+        box-shadow: 1px 1px 15px 5px #f1c40f;
+    }
+    .horse{
+        position: absolute;
+        top: 60vh;
+        left: 40vw;
+        .head{
+            .brain{
+                &:extend(.part);
+                width: 2.8vw;
+                height: 2vw;
+                border-radius: 70%;
+                left: -5vw;
+                .eye{
+                    &:extend(.part);
+                    width: 0.5vw;
+                    height: 0.5vw;
+                    border-radius: 50%;
+                    top: 0.8vw;
+                }
+                .ear{
+                    &:extend(.part);
+                    width: 1vw;
+                    height: 0.5vw;
+                    border-radius: 20%;
+                    transform: rotate(-20deg);
+                    top: 0;
+                    left: 2vw;
+                }
+            }
+            .core{
+                &:extend(.part);
+                width: 1.5vw;
+                height: 1.7vw;
+                border-radius: 50%;
+                top: 1.3vw;
+                left: -5vw;
+            }
+            .jaw{
+                &:extend(.part);
+                width: 2.2vw;
+                height: 1vw;
+                transform: rotate(-20deg);
+                top: 2.3vw;
+                left: -6.3vw;
+            }
+            .nose{
+                &:extend(.part);
+                width: 2.5vw;
+                height: 1vw;
+                transform: rotate(-35deg);
+                top: 1.3vw;
+                left: -6.8vw;
+            }
+            .topMouth{
+                &:extend(.part);
+                width: 1vw;
+                height: 1vw;
+                border-radius: 50%;
+                top: 2.2vw;
+                left: -7.4vw;
+            }
+            .bottomMouth{
+                &:extend(.part);
+                width: 0.7vw;
+                height: 1vw;
+                border-radius: 10%;
+                top: 2.8vw;
+                left: -6.7vw;
+            }
+        }
+        .neck{
+            .front{
+                &:extend(.part);
+                width: 1.5vw;
+                height: 6vw;
+                border-radius: 30%;
+                left: -2.5vw;
+                top: 1vw;
+                transform: rotate(-25deg);
+            }
+            .back{
+                &:extend(.part);
+                width: 1.5vw;
+                height: 4vw;
+                border-radius: 30%;
+                left: -1.8vw;
+                top: 0.5vw;
+                transform: rotate(-45deg);
+            }
+            .backLow{
+                &:extend(.part);
+                width: 4vw;
+                height: 1.5vw;
+                border-radius: 30%;
+                left: -1vw;
+                top: 3vw;
+                transform: rotate(25deg);
+            }
+        }
+        .body{
+            .front{
+                &:extend(.part);
+                &:extend(.bodyPart);
+                left: -2vw;
+                top: 3vw;
+                transform: rotate(-25deg);
+            }
+            .mid{
+                &:extend(.part);
+                &:extend(.bodyPart);
+                left: 0;
+                top: 3.2vw;
+            }
+            .back{
+                &:extend(.part);
+                &:extend(.bodyPart);
+                left: 2vw;
+                top: 3vw;
+                transform: rotate(-10deg);
+            }
+            .last{
+                &:extend(.part);
+                &:extend(.bodyPart);
+                left: 4vw;
+                top: 2.5vw;
+                transform: rotate(-15deg);
+            }
+            .ass{
+                &:extend(.part);
+                width: 5vw;
+                height: 3vw;
+                border-radius: 40%;
+                left: 6vw;
+                top: 2.5vw;
+                transform: rotate(15deg);
+            }
+        }
+        .tail{
+            .front{
+                &:extend(.part);
+                &:extend(.tailPart);
+                left: 10vw;
+                transform: rotate(25deg);
+            }
+            .mid{
+                &:extend(.part);
+                &:extend(.tailPart);
+                left: 11vw;
+                transform: rotate(25deg);
+            }
+            .back{
+                &:extend(.part);
+                &:extend(.tailPart);
+                left: 12vw;
+                transform: rotate(25deg);
+            }
+            .last{
+                &:extend(.part);
+                &:extend(.tailPart);
+                left: 13vw;
+                transform: rotate(25deg);
+            }
+        }
+        .backLeftLeg{
+            .shoulder{
+                &:extend(.part);
+                width: 3.5vw;
+                height: 4vw;
+                border-radius: 40%;
+                top: 4vw;
+                left: 8vw;
+            }
+            .upper{
+                &:extend(.part);
+                width: 1vw;
+                height: 3vw;
+                border-radius: 20%;
+                top: 7vw;
+                left: 9vw;
+                transform: rotate(-20deg);
+            }
+            .knee{
+                &:extend(.part);
+                width: 0.8vw;
+                height: 4vw;
+                border-radius: 20%;
+                top: 9.2vw;
+                left:9vw;
+                transform: rotate(20deg);
+            }
+            .foot{
+                &:extend(.part);
+                width: 0.8vw;
+                height: 0.8vw;
+                border-radius: 40%;
+                top: 13vw;
+                left: 8.3vw;
+            }
+        }
+    }
+}
+
