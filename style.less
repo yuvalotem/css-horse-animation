@@ -1,6 +1,6 @@
 .part {
     background-color: #fffff19;
-    // background-color: black;
+    background-color: black;
     border: 1px black solid;
     position: absolute;
 }
@@ -100,7 +100,7 @@
   }
   50%  {
     transform: rotate(0deg);
-    top: 10.5vw;
+    top: 10vw;
     left: 6vw;
   }
   100% {
@@ -112,15 +112,12 @@
 @keyframes upper-animation2 {
   0%   {
     transform: rotate(-20deg);
-    // top: 7vw;
   }
   25%  {
     transform: rotate(60deg);
-    // top: 7vw;
   }
   50%  {
     transform: rotate(50deg);
-    // top:5vw;
   }
   100% {
     transform: rotate(-20deg);
@@ -158,6 +155,94 @@
     left: 7.3vw;
   }
 }
+@keyframes knee-animation3 {
+    0%   {
+      transform: rotate(20deg);
+      top: 10.5vw;
+      left: -1vw
+    }
+    25%  {
+      transform: rotate(0deg);
+      top: 9.5vw;
+      left: -3vw
+    }
+    50%  {
+      transform: rotate(0deg);
+      top: 10vw;
+      left: -3vw;
+    }
+    100% {
+      transform: rotate(20deg);
+      top: 10.5vw;
+      left: -1vw
+    }
+  }
+@keyframes foot-animation3 {
+  0%   {
+    top: 15vw;
+    left: -1.7vw;
+  }
+  25%  {
+    top: 14vw;
+    left: -3vw;
+  }
+  50%  {
+    top: 15vw;
+    left: -3vw;
+  }
+  100% {
+    top: 15vw;
+    left: -1.7vw;
+  }
+}
+@keyframes knee-animation4 {
+    0%   {
+      transform: rotate(20deg);
+      top: 10.5vw;
+      left: 0vw
+    }
+    25%  {
+      transform: rotate(-20deg);
+      top: 10.5vw;
+      left: 2vw
+    }
+    50%  {
+      transform: rotate(0deg);
+      top: 8vw;
+      left: 2vw;
+    }
+    100% {
+      transform: rotate(20deg);
+      top: 10.5vw;
+      left: 0vw
+    }
+  }
+@keyframes foot-animation4 {
+  0%   {
+    top: 15vw;
+    left: -1vw;
+  }
+  25%  {
+    top: 15vw;
+    left: 3vw;
+  }
+  50%  {
+    top: 13vw;
+    left: 2vw;
+  }
+  100% {
+    top: 15vw;
+    left: -1vw;
+  }
+}
+@keyframes head-animation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-20deg);
+    }
+  }
 
 #container{
     .sky{
@@ -194,6 +279,7 @@
         top: 60vh;
         left: 40vw;
         .head{
+            animation: head-animation 0.5s linear infinite alternate;
             position: absolute;
             top: -2vw;
             left: -1.5vw;
@@ -262,9 +348,10 @@
             }
         }
         .neck{
+            animation: head-animation 0.5s linear infinite alternate;
             .front{
                 &:extend(.part);
-                width: 1.5vw;
+                width: 2vw;
                 height: 8vw;
                 border-radius: 30%;
                 left: -3.5vw;
@@ -273,7 +360,7 @@
             }
             .back{
                 &:extend(.part);
-                width: 1.5vw;
+                width: 2vw;
                 height: 6vw;
                 border-radius: 30%;
                 left: -3.2vw;
@@ -358,88 +445,96 @@
             .shoulder{
                 top: 4vw;
                 left: -2vw;
+                animation: shoulder-animation2 0.5s linear infinite ;
             }
             .upper{
                 top: 7vw;
                 left: -1vw;
                 transform: rotate(-20deg);
+                animation: upper-animation2 0.5s linear infinite ;
             }
             .knee{
                 top: 10.5vw;
                 left: -1vw;
                 transform: rotate(20deg);
+                animation: knee-animation3 0.5s linear infinite ;
             }
             .foot{
                 top: 15vw;
                 left: -1.7vw;
+                animation: foot-animation3 0.5s linear infinite ;
             }
         }
         .frontLeftLeg{
             .shoulder{
                 top: 4vw;
                 left: -1vw;
+                animation: shoulder-animation 0.5s linear infinite ;
             }
             .upper{
                 top: 7vw;
                 left: 0;
                 transform: rotate(-20deg);
+                animation: upper-animation 0.5s linear infinite ;
             }
             .knee{
                 top: 10.5vw;
                 left: 0;
                 transform: rotate(20deg);
+                animation: knee-animation4 0.5s linear infinite ;
             }
             .foot{
                 top: 15vw;
                 left: -0.7vw;
+                animation: foot-animation4 0.5s linear infinite ;
             }
         }
         .backRightLeg{
             .shoulder{
                 top: 4vw;
                 left: 7vw;
-                animation: shoulder-animation 4s linear infinite ;
+                animation: shoulder-animation2 0.5s linear infinite ;
             }
             .upper{
                 top: 7vw;
                 left: 8vw;
                 transform: rotate(-20deg);
-                animation: upper-animation2 4s linear infinite ;
+                animation: upper-animation2 0.5s linear infinite ;
             }
             .knee{
                 top: 10.5vw;
                 left: 8vw;
                 transform: rotate(20deg);
-                animation: knee-animation2 4s linear infinite;
+                animation: knee-animation2 0.5s linear infinite;
             }
             .foot{
                 top: 15vw;
                 left: 7.3vw;
-                animation: foot-animation2 4s linear infinite;
+                animation: foot-animation2 0.5s linear infinite;
             }
         }
         .backLeftLeg{
             .shoulder{
                 top: 4vw;
                 left: 8vw;
-                animation: shoulder-animation 4s linear infinite ;
+                animation: shoulder-animation 0.5s linear infinite ;
             }
             .upper{
                 top: 7vw;
                 left: 9vw;
                 transform: rotate(-20deg);
-                animation: upper-animation 4s linear infinite ;
+                animation: upper-animation 0.5s linear infinite ;
             }
             .knee{
                 top: 10.5vw;
                 left:9vw;
                 transform: rotate(20deg);
-                animation: knee-animation 4s linear infinite;
+                animation: knee-animation 0.5s linear infinite;
             }
             .foot{
                 top: 15vw;
                 left: 8vw;
-                animation: foot-animation 4s linear infinite;
+                animation: foot-animation 0.5s linear infinite;
             }
         }
     }
